@@ -1,3 +1,5 @@
 summary: Basic smoke test
 execute:
-    script: tmt --help
+    script:
+        - rpm -q tmt || dnf -y install tmt
+        - tmt --help
